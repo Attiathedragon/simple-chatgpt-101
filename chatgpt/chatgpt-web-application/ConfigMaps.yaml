@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: chatgpt-configmap
+data:
+  OPENAI_API_KEY: ""
+  MYSQL_HOST: "mysqlprivateconnectionstring.mysql.me-central-1.rds.aliyuncs.com"
+  MYSQL_USER: "test"
+  MYSQL_PASSWORD: "Password@1"
+  MYSQL_DATABASE: "users"
+  REDIS_USER: "test1"
+  REDIS_PASSWORD: "Password@1"
+  REDIS_HOST: "privateconnectionstringprefix.redis.me-central-1.rds.aliyuncs.com"
+  
