@@ -5,7 +5,7 @@ metadata:
 data:
   OPENAI_API_KEY: ""
   MYSQL_HOST: "mysqlprivateconnectionstring.mysql.me-central-1.rds.aliyuncs.com"
-  MYSQL_USER: "test"
+  MYSQL_USER: "test1"
   MYSQL_PASSWORD: "Password@1"
   MYSQL_DATABASE: "users"
   REDIS_USER: "test1"

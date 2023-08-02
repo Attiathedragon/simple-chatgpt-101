@@ -67,7 +67,7 @@ resource "alicloud_db_instance" "mysqldb" {
 
 resource "alicloud_db_account" "account" {
   instance_id = alicloud_db_instance.mysqldb.id
-  name        = "test"
+  name        = "test1"
   password    = "Password@1"
 }
 
@@ -91,6 +91,12 @@ resource "alicloud_db_connection" "connection" {
 /////////////////////////////////////////////////////////////////
 
 //redis
+
+
+resource "alicloud_resource_manager_resource_group" "chatgpt_resource_group" {
+  resource_group_name = "chatgpt_resource_group"
+  display_name        = "chatgpt_resource_group"
+}
 
 resource "alicloud_security_group" "group" {
   name        = "alicloud_security_group"
@@ -126,7 +132,7 @@ resource "alicloud_kvstore_instance" "redis" {
     Created = "TF",
     For     = "Test",
   }
-  resource_group_id = "rg-acfnwudduaiwdty"
+  resource_group_id = alicloud_resource_manager_resource_group.chatgpt_resource_group.id
   zone_id           = data.alicloud_zones.zone.zones[0].id
   secondary_zone_id = data.alicloud_zones.zone.zones[1].id
 
