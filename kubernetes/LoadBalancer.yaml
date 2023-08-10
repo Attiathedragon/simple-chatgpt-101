@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: chatgpt
   annotations:
-    service.beta.kubernetes.io/alibaba-cloud-loadbalancer-id: 'lb-l4v98gwxfvkb75otw7bu5'
+    service.beta.kubernetes.io/alibaba-cloud-loadbalancer-id: 'lb-l4vofgphs35w1wxwg4j6c'
     service.beta.kubernetes.io/alicloud-loadbalancer-force-override-listeners: 'true'
 spec:
   type: LoadBalancer
